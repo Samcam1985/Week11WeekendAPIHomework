@@ -1,4 +1,9 @@
 
+body {
+    background-color: #afeeee;
+  
+}
+
 div{
   display: inline-block;
 }
@@ -8,11 +13,14 @@ ul{
   float:left;
 }
 
-ul li
-{
+ul li{
   list-style-type: none;
 }
 
+h1{
+  font-size: 20px;
+  text-align: left;
+}
 
 #characters
 {
@@ -26,6 +34,7 @@ ul li
   float:right;
   width:50%;
   height:100%;
+  padding-bottom: 50px;
 }
 
 .characterImageDiv{
@@ -51,4 +60,8 @@ ul li
 #main-map {
   height: 500px;
   width: 500px;
+}
+
+#button-hogwartsExpress {
+  align: center;
 }
