@@ -1,0 +1,49 @@
+
+div{
+  display: inline-block;
+}
+
+ul{
+  padding: 0;
+  float:left;
+}
+
+ul li
+{
+  list-style-type: none;
+}
+
+
+#characters
+{
+  float:left;
+  width:50%;
+  height:100%;
+}
+
+#graph
+{
+  float:right;
+  width:50%;
+  height:100%;
+}
+
+.characterImageDiv{
+  width:100px;
+}
+
+.characterDetailsDiv{
+  vertical-align: top;
+  margin:5px;
+  text-align: left;
+}
+
+.characterLeft {
+  float: left;
+  width:50%;
+}
+
+.characterRight {
+  float: right;
+  width:50%;
+}
