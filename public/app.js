@@ -8,6 +8,19 @@ window.addEventListener('load', function() {
     loadHarryPotterCharacters(request.responseText);
   });
 
+
+    var edinburgh = {lat: 55.9533, lng: -3.1883, name: "Edinburgh", description: "Edinburgh is the capital city of Scotland and one of its 32 council areas. It is located in Lothian on the Firth of Forth's southern shore."}
+    var hogwarts_express = {lat: 51.5322, lng: -0.1240, name: "Hogwarts Express", description: " Jump on the Hogwarts Express at platform 9 3/4, to find the platform you need to go through a wall between platform 9 and 10."}
+    var mapDiv = document.querySelector('#main-map');
+    var mainMap = new MapWrapper(mapDiv, edinburgh, 10);
+    mainMap.addMarker(edinburgh);
+    mainMap.addMarker(hogwarts_express);
+    // mainMap.addClickEvent();
+
+      var takeMeToHogwartsExpressButton = document.querySelector('#button-hogwartsExpress');
+      takeMeToHogwartsExpressButton.addEventListener('click', mainMap.hogwartsExpressMarker.bind(mainMap));
+    
+
   var createImage = function(imageUrl){
     var image = document.createElement('img');
     image.style.width = '100px';
@@ -31,9 +44,6 @@ window.addEventListener('load', function() {
     housePopulationData = [];
     var charactersArray = JSON.parse(responseText);
 
-
-    
-    console.log(characters);
     var characters = document.querySelector('#characters');
 
     var index = 1;

@@ -47,3 +47,8 @@ ul li
   float: right;
   width:50%;
 }
+
+#main-map {
+  height: 500px;
+  width: 500px;
+}
