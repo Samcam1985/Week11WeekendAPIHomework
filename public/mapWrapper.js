@@ -45,8 +45,13 @@ MapWrapper.prototype = {
      
       hogwartsExpressMarker: function() {
         this.googleMap.setCenter({lat: 51.5322, lng: -0.1240});
+      },
+
+      theElephantHouseMarker: function() {
+        this.googleMap.setCenter({lat: 55.9476, lng: -3.1917});
       }
 
+     
   
 
     }

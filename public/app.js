@@ -11,14 +11,21 @@ window.addEventListener('load', function() {
 
     var edinburgh = {lat: 55.9533, lng: -3.1883, name: "Edinburgh", description: "Edinburgh is the capital city of Scotland and one of its 32 council areas. It is located in Lothian on the Firth of Forth's southern shore."}
     var hogwarts_express = {lat: 51.5322, lng: -0.1240, name: "Hogwarts Express", description: " Jump on the Hogwarts Express at platform 9 3/4, to find the platform you need to go through a wall between platform 9 and 10."}
+    var elephant_house = {lat: 55.9476, lng: -3.1917, name: "The Elephant House", description: " JK Rowling wrote the Potter books over coffee and cake in this relaxed writer/reader-friendly cafe."}
+
     var mapDiv = document.querySelector('#main-map');
     var mainMap = new MapWrapper(mapDiv, edinburgh, 10);
     mainMap.addMarker(edinburgh);
     mainMap.addMarker(hogwarts_express);
-    // mainMap.addClickEvent();
+    mainMap.addMarker(elephant_house);
+    mainMap.addClickEvent();
 
       var takeMeToHogwartsExpressButton = document.querySelector('#button-hogwartsExpress');
       takeMeToHogwartsExpressButton.addEventListener('click', mainMap.hogwartsExpressMarker.bind(mainMap));
+
+      
+      var takeMeToWhereJKRowlingWroteHarryPotter = document.querySelector('#button-theElephantHouse');
+      takeMeToWhereJKRowlingWroteHarryPotter.addEventListener('click', mainMap.theElephantHouseMarker.bind(mainMap));
     
 
   var createImage = function(imageUrl){
